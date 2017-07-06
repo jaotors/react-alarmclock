@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.clock-container p {
+  font-size: 24px;
+  margin: 0;
+}
+
+.inputList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputList li span {
+  display: block;
+  text-align: center;
+}
+
+.inputList li input[type="text"] {
+  width: 100px;
+  margin: 5px;
+}
+
+.note span {
+  display: block;
+  text-align: left;
+}
+
+.note input[type="text"] {
+  width: 100%;
+}
