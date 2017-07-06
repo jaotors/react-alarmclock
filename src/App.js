@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './components/Clock'
+import Alarm from './components/Alarm'
 import './App.css';
 
 class App extends Component {
@@ -11,19 +12,7 @@ class App extends Component {
           <Clock />
         </div>
         <div className="alarm-container">
-          <ul className="inputList">
-            <li><span>Hours</span><input type="text"/></li>
-            <li><span>Minutes</span><input type="text"/></li>
-            <li><span>Seconds</span><input type="text"/></li>
-            <li>
-              <span>AM/PM</span>
-              <select name="" id="">
-                <option value="AM">AM</option>
-                <option value="PM">PM</option>
-              </select>
-              </li>
-          </ul>
-          <div className="note"><span>Note</span><input type="text"/></div>
+          <Alarm />
         </div>
       </div>
     );

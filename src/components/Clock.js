@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 
 class Clock extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
 
     this.state = {
       hours: '',
@@ -10,6 +10,8 @@ class Clock extends Component {
       seconds: '',
       ampm: '',
     }
+
+    this.ticks = this.ticks.bind(this)
   }
 
   ticks() {
@@ -19,6 +21,7 @@ class Clock extends Component {
         minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
         seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds(),
         ampm = (date.getHours() < 12) ? 'AM' : 'PM'
+
     this.setState({
       hours: hours,
       minutes: minutes,
@@ -28,7 +31,7 @@ class Clock extends Component {
   }
 
   componentDidMount() {
-    this.interval = setInterval(this.ticks(), 1000)
+    this.interval = setInterval(this.ticks, 1000)
   }
 
   componentWillUnmount() {

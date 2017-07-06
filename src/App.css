@@ -20,9 +20,14 @@
   text-align: center;
 }
 
-.inputList li input[type="text"] {
+.inputList li input[type="number"] {
   width: 100px;
   margin: 5px;
+}
+
+.note {
+  width: 390px;
+  margin: 0 auto 10px;
 }
 
 .note span {
